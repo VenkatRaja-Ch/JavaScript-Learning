@@ -3,7 +3,7 @@ let score = 33
 console.log(typeof score); // one way
 console.log(typeof(score)); // another way of using typeof()
 
-score1 = "33"
+let score1 = "33"
 console.log(typeof score1);
 let valueInNumber = Number(score1);
 console.log(typeof score1);
@@ -63,3 +63,66 @@ let someNumber = 33
 let stringNumber = String(someNumber);
 console.log(typeof someNumber)  // converts it into string
 console.log(someNumber);    // outputs 33
+
+
+// *************************** Operations *************************** //
+
+let value = 3
+let negativeValue = -value
+console.log(negativeValue);
+
+// other operations
+console.log("sum: ", 2+2);
+console.log("difference: ", 2-0);
+console.log("Multiplication: ", 2*2);
+console.log("Division/ Quotient: ", 10/2);
+console.log("Modulo/ Remainder: ", 10%2);
+
+let str1 = "Hello"
+let str2 = " Venkat!"
+
+let str3 = str1 + str2
+console.log(str3);
+
+// Now tricky part:
+// Reference Note: tc39.es -> documentation -> Abstract Operation -> 7.1 Type Conversion
+// Link: https://tc39.es/ecma262/#sec-type-conversion
+console.log(1 + "2");
+console.log("1" + 2);
+console.log("1" + 2 + 2);
+console.log(1 + 2 + "2");
+
+// For now, if the string is first then everything will be treated as string.
+// If, there is number first, then first it will be treated as a number and then if there is string then the entire thing
+    // will be converted into string.
+
+
+
+// More tricky conversion:
+console.log(true);
+console.log(true + true);
+console.log(+"");
+
+let num1, num2, num3
+num1 = num2 = num3 = 2 + 2  // don't do it, code should be more readable.
+
+
+// another case
+let gameCounter = 100
+gameCounter++;
+console.log(gameCounter);
+
+// Prefix and Postfix Operator
+// Documentation: MDN -> Opearators -> Increament.
+// Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"

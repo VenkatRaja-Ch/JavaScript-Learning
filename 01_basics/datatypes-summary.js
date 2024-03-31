@@ -49,3 +49,46 @@ const printHelloWorldFunction = function(){
 console.log(typeof heros);
 console.log(typeof myObject);
 console.log(typeof printHelloWorldFunction);
+console.log("---------------------------\n");
+
+
+
+// =================================== STACK & HEAP MEMORY =================================== //
+
+// Stack Memory (Primitive Data Tyep) and Heap Memory (Non-Primitive Data Type)
+console.log("Functioning of Stack Memory examples:");
+
+// Examples: Using Primitive data types
+let myYouTubeName = "freeCodeCamp"
+console.log("myYouTubeName: ", myYouTubeName);
+
+let anotherYouTubeName = myYouTubeName
+console.log("performing operation -> anotherYouTubeName = myYouTubeName ")
+console.log("anotherYouTubeName: ", anotherYouTubeName);
+
+anotherYouTubeName = "codeHelp.in"
+console.log("updating the variable 'anotherYouTubeName' by performing operation -> anotherYouTubeName = 'codeHelp.in'");
+console.log("anotherYouTubeName: ", anotherYouTubeName);
+
+
+
+// Example: Using Heap Memory
+console.log("\n")
+console.log("Functioning of Heap Memory examples:")
+let userOne = {
+    name: "Venkat Raja Ch",
+    email: "chvenkatraja.work@gmail.com",
+    upi: "upiid@ybl"
+}
+console.log("User One Object", userOne);
+
+let userTwo = userOne
+console.log("Performing operation, creating another variable and assigning userOne -> let userTwo = userOne");
+console.log("printing userTwo: ", userTwo);
+
+console.log("Updating email address of userTwo -> userTwo.email='changedEmail@email.com'")
+userTwo.email="changedEmail@email.com"
+
+console.log("Printing userOne and userTwo email address: ");
+console.log("userOne.email = ", userOne.email);
+console.log("userTwo.email = ", userTwo.email);
